@@ -1,0 +1,116 @@
+# RSM Workflow Status
+# Project: PhysioNet 2025 ECG Digitization Challenge
+# Generated: 2025-12-02
+
+project_name: PhysioNet 2025 ECG Digitization Challenge
+project_slug: physionet-2025-ecg
+organization: bioml-labs
+project_type: competition
+
+preset: full-scientific
+
+current_phase: initialization
+current_week: 1
+competition_deadline: 2026-01-22
+
+phases:
+  - phase: 0
+    name: "Initialization"
+    status: complete
+    workflows:
+      - id: "research-project-init"
+        status: complete
+        completed_at: 2025-12-02T19:57:00Z
+
+  - phase: 1
+    name: "Knowledge Gathering"
+    status: in_progress
+    workflows:
+      - id: "ingest-documents"
+        status: pending
+        description: "Ingest competition rules, papers, prior solutions"
+      - id: "literature-review"
+        status: pending
+        description: "Review ECG digitization approaches"
+
+  - phase: 2
+    name: "Hello World Submission"
+    status: not_started
+    deadline: 2025-12-09
+    workflows:
+      - id: "docker-setup"
+        status: pending
+        description: "Set up submission Docker container"
+      - id: "baseline-model"
+        status: pending
+        description: "Create minimal working model"
+      - id: "first-submission"
+        status: pending
+        description: "Submit to competition server"
+
+  - phase: 3
+    name: "Infrastructure & Data"
+    status: not_started
+    deadline: 2025-12-16
+    workflows:
+      - id: "compute-benchmark"
+        status: pending
+        description: "Benchmark Mac Studio performance"
+      - id: "data-pipeline"
+        status: pending
+        description: "Set up data loading and preprocessing"
+      - id: "golden-holdout"
+        status: pending
+        description: "CDO creates validation holdout"
+
+  - phase: 4
+    name: "Model Development"
+    status: not_started
+    workflows:
+      - id: "scientific-loop"
+        status: pending
+      - id: "hypothesis"
+        status: pending
+      - id: "experiments"
+        status: pending
+
+  - phase: 5
+    name: "Final Submission"
+    status: not_started
+    deadline: 2026-01-22
+    workflows:
+      - id: "model-optimization"
+        status: pending
+      - id: "final-validation"
+        status: pending
+      - id: "submission-prep"
+        status: pending
+
+next_workflow: "ingest-documents"
+next_agent: "competition-coordinator"
+
+# Three Pillars Status
+pillars:
+  science:
+    owner: jess
+    status: not_started
+    current_focus: null
+    completed: []
+    in_progress: []
+    blocked: []
+
+  data_science:
+    owner: ml-expert
+    status: not_started
+    current_focus: null
+    model_architecture: TBD
+    training_status: not_started
+    latest_metrics: null
+
+  development:
+    owner: dan
+    status: in_progress
+    current_focus: "Project initialization"
+    infrastructure_percent: 10
+    compute_status: "Mac Studio available"
+    pipeline_status: not_started
